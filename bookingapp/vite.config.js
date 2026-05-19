@@ -18,6 +18,12 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
+  server: {
+    allowedHosts: true
+  },
+  preview: {
+    allowedHosts: true
+  },
   build: {
     rollupOptions: {
       output: {
