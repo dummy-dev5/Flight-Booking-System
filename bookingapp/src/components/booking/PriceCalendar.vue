@@ -163,7 +163,7 @@
 
 <script setup>
 import { ref, computed, onMounted, watch } from 'vue';
-import axios from 'axios';
+import api from '@/services/api/axios';
 
 const props = defineProps({
   origin: String,
@@ -235,7 +235,7 @@ const fetchMonthPrices = async () => {
     const startDate = new Date(currentYear.value, currentMonth.value, 1).toISOString().split('T')[0];
     const endDate = new Date(currentYear.value, currentMonth.value + 1, 0).toISOString().split('T')[0];
     
-    const response = await axios.get(`${import.meta.env.VITE_API_URL}flightapp/api/schedules/price-calendar/`, {
+    const response = await api.get('flightapp/api/schedules/price-calendar/', {
       params: {
         origin: props.origin,
         destination: props.destination,
