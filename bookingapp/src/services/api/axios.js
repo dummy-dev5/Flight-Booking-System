@@ -4,7 +4,7 @@ import AuthStorage from '@/utils/authStorage';
 import { getFriendlyErrorMessage } from '@/utils/errorMapper';
 
 const api = axios.create({
-    baseURL: import.meta.env.VITE_API_URL || (import.meta.env.DEV ? 'http://localhost:8000' : 'https://fbs-vue.onrender.com'),
+    baseURL: import.meta.env.VITE_API_URL || (import.meta.env.DEV ? 'http://localhost:8000' : 'https://fbs-backend-production.up.railway.app'),
     headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json'

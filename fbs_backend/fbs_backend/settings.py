@@ -33,10 +33,10 @@ SECRET_KEY = config('SECRET_KEY', default='')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost,127.0.0.1,192.168.1.10,fbs-vue.onrender.com,.onrender.com').split(',')
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost,127.0.0.1,192.168.1.10,fbs-vue.onrender.com,.onrender.com,fbs-backend-production.up.railway.app,.up.railway.app').split(',')
 
-CORS_ALLOW_ALL_ORIGINS = config('CORS_ALLOW_ALL_ORIGINS', default=DEBUG, cast=bool)
-CORS_ALLOWED_ORIGINS = config('CORS_ALLOWED_ORIGINS', default='http://localhost:5173,http://192.168.1.10:5173,https://fbs-vue-1.onrender.com,https://fbs-vue.onrender.com').split(',')
+CORS_ALLOW_ALL_ORIGINS = config('CORS_ALLOW_ALL_ORIGINS', default=True, cast=bool)
+CORS_ALLOWED_ORIGINS = config('CORS_ALLOWED_ORIGINS', default='http://localhost:5173,http://192.168.1.10:5173,https://fbs-vue-1.onrender.com,https://fbs-vue.onrender.com,https://csucc-flight-booking.up.railway.app').split(',')
 CORS_ALLOW_CREDENTIALS = True
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
@@ -74,7 +74,7 @@ CORS_ALLOW_HEADERS = [
 ]
 
 # CSRF trusted origins for cross-site POSTs (development)
-CSRF_TRUSTED_ORIGINS = config('CSRF_TRUSTED_ORIGINS', default='http://localhost:5173,http://192.168.1.10:5173,https://fbs-vue-1.onrender.com,https://fbs-vue.onrender.com').split(',')
+CSRF_TRUSTED_ORIGINS = config('CSRF_TRUSTED_ORIGINS', default='http://localhost:5173,http://192.168.1.10:5173,https://fbs-vue-1.onrender.com,https://fbs-vue.onrender.com,https://csucc-flight-booking.up.railway.app').split(',')
 
 # settings.py
 from decouple import config
@@ -262,8 +262,8 @@ SERVER_EMAIL = 'cthmfbs@gmail.com'
 # Support Contact Info (used in emails)
 SUPPORT_EMAIL = 'support@philippineairlines.com'
 SUPPORT_PHONE = '(02) 8855-8888'
-WEBSITE_URL = config('WEBSITE_URL', default='https://fbs-vue-1.onrender.com/')
-FRONTEND_URL = config('FRONTEND_URL', default='https://fbs-vue-1.onrender.com/')
+WEBSITE_URL = config('WEBSITE_URL', default='https://csucc-flight-booking.up.railway.app/')
+FRONTEND_URL = config('FRONTEND_URL', default='https://csucc-flight-booking.up.railway.app/')
 # WEBSITE_URL = 'https://www.philippineairlines.com'
 
 # For development (prints emails to console instead of sending)
