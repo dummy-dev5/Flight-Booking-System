@@ -268,3 +268,5 @@ FRONTEND_URL = config('FRONTEND_URL', default='https://csucc-flight-booking.up.r
 
 # For development (prints emails to console instead of sending)
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# Trigger deployment: Webhook sync after Railway outage recovery
+
